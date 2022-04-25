@@ -1,0 +1,105 @@
+/* Reseting Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border and padding will be inside the box limits. margin is not apply */
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 10vh;
+    margin-top: 1vh;
+    /* vh = 1% Viewport Height vw = 1% Viewport Width */
+}
+
+h2 {
+    text-align: right;
+}
+
+body {
+    /* height: 75vh; */
+    /* width: 100vw; */
+    background: green;
+}
+
+.game-table {
+    display: flex;
+    flex-wrap: wrap;
+    /* width: 80%; */
+    width: 70vw;
+    /* height: 100%; */
+    height: 75vh;
+    border: 2px solid greenyellow;
+    margin: auto;
+    /* centralize */
+    margin-top: 3%;
+    perspective: 1000px;
+    /* this give deph to the element */
+    justify-content: center;
+    align-content: center;
+}
+
+.memory-card {
+    position: relative;
+    flex: 0 0 7%;
+    width: 7vw;
+    /* width: 9%; */
+    /* width: 110px; */
+    height: 17vh;
+    /* height: 18%; */
+    /* height: 220px; */
+    margin: 0.4vh;
+    transform-style: preserve-3d;
+    /* insert the effect to the element */
+    transition: transform .5s;
+    /* releted to the preserve-3D */
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 5);
+    transform: scale(1);
+}
+
+/* this is going to add a effect to the card when clicked.  */
+.memory-card:active {
+    transform: scale(0.97);
+    transition: transform .2s;
+    /*Works together with "transform: scale(1)" .memory-card*/
+}
+
+.memory-card.flip {
+    /* for the class elem after adding .flip. is without spave because the classes belong to the same elem*/
+    transform: rotateY(180deg);
+}
+
+.back-face,
+.front-face {
+    position: absolute;
+    border: 2px solid rgb(238, 255, 0);
+    width: 100%;
+    /*Taking 100% of his container */
+    height: 100%;
+    /*Taking 100% of his container */
+    background: aqua;
+    backface-visibility: hidden;
+    /* when clicked the card shows his backface. that the mirror of the card. so we are turning the backface off */
+    /*and than we can see the .back-face of the card*/
+}
+
+.front-face {
+    border-radius: 3px;
+    cursor: pointer;
+    /* add a finger emoji to the cursor when located on the card */
+}
+
+.back-face {
+    text-align: center;
+    background-color: aqua;
+    font-size: 10vh;
+    text-align: center;
+    transform: rotateY(180deg);
+    /* after the front-face is rotated the back-face too to show instead od the card */
+}
+
+.memory-card.flip.delete {          /* Adding visibility hidden to new className added to cards on deleteCards()*/
+    visibility: hidden;
+}
