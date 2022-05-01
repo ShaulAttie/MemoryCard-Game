@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h1>Memory Game</h1>
+    <h1 class="header">Memory Game</h1>
 
 
     <!-- <form action="/action_page.php" target="_blank"> -->
@@ -31,38 +31,39 @@
                 2 - pilha de cartas de ambos os lados - contagem de pontuacao
     -->
 
-    <!-- <form action="" id="frm1">
-        <label for="">How many pairs of cards do you want to play?</label>
-        3
-        <input type="range" id="ran" name="ran" min="3" max="25" value="10">
-        25
-        =
-        <output name="x" id="ranValueOut">10</output>
-        pairs
-        <br><br>
-        <button type="submit" onclick="">Start Game</button>
-    </form> -->
+    <!-- <form action="" id="frm1"> -->
+
+    <!-- </form> -->
 
 
 
-    <section id="game-table" class="game-table"></section>
+    <div id="game-table" class="game-table">
+        <h1 id="wellcome">Wellcome...</h1>
+    </div>
 
 
+    <div id="section2" class="section2">
+        <div class="range">
+            <label for="">How many pairs of cards do you want to play?</label> <br><br>
 
-    <h2>You tried <span id="count">0</span> times.</h2>
+            3 <input type="range" id="ran" name="ran" min="3" max="25" value="10"><span> 25 = </span>
+            <output name="x" id="ranValueOut">10</output> pairs
+            <br><br>
+
+            <input type="number" name="players" id="numPlayers" placeholder="1-8" min="1" max="8" step="1">
+            <button type="submit" id="startGame">Start Game</button>
+        </div>
+
+        <div class="players">
+            <h2>Players:</h2>
+            <div id="players"></div>
+        </div>
+
+        <h2 class="count">You tried <span id="count">0</span> times.</h2>
+
+    </div>
 
     <script src="001 MemoryCard.js"></script>
-    
-    <!-- <script>
-        let ranVal = document.getElementById('ran')
-        console.log(ranVal);
-    </script> -->
-    <!-- <script>
-        function myFunction(e) {
-            let x = document.getElementById("ran").value;
-            console.log(x);
-        }
-    </script> -->
 </body>
 
 </html>

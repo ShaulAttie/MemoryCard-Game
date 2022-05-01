@@ -1,27 +1,76 @@
 /* Reseting Styles */
 * {
-    padding: 0;
+    /* padding: 0; */
     margin: 0;
     box-sizing: border-box;
     /* border and padding will be inside the box limits. margin is not apply */
 }
 
-h1 {
-    display: block;
-    text-align: center;
-    font-size: 10vh;
-    margin-top: 1vh;
-    /* vh = 1% Viewport Height vw = 1% Viewport Width */
-}
-
-h2 {
-    text-align: right;
+html {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 body {
-    /* height: 75vh; */
-    /* width: 100vw; */
+    height: 100vh;
+    width: 100vw;
     background: green;
+    display: grid;
+    grid-template-areas:
+        'header header header header'
+        'game-table game-table game-table range'
+        'game-table game-table game-table players'
+        'game-table game-table game-table count'
+}
+
+.header {
+    grid-area: header;
+    display: block;
+    text-align: center;
+    font-size: 10vh;
+    /* vh = 1% Viewport Height vw = 1% Viewport Width */
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+    align-content: center;
+}
+
+.game-table {
+    grid-area: game-table;
+    margin: 3vh;
+
+}
+
+.range {
+    grid-area: range;
+    border: 0.3vh solid greenyellow;
+    margin-top: 3vh;
+    margin-right: 3vw;
+    text-align: center;
+    padding: 2vh;
+}
+
+input[type='text'] {
+    width: 5vw;
+}
+
+.players {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-area: players;
+    border: 0.3vh solid greenyellow;
+    height: 42vh;
+    margin-top: 5vh;
+    margin-right: 3vw;
+    align-content: center;
+}
+
+.count {
+    grid-area: count;
+    /* border: 2px solid black; */
+    margin-top: 3.5vh;
+    margin-right: 3vw;
+    text-align-last: center;
 }
 
 .game-table {
@@ -31,11 +80,8 @@ body {
     width: 70vw;
     /* height: 100%; */
     height: 75vh;
-    border: 2px solid greenyellow;
-    margin: auto;
-    /* centralize */
-    margin-top: 3%;
-    perspective: 1000px;
+    border: 0.5vh solid greenyellow;
+    /* perspective: 1000px; */
     /* this give deph to the element */
     justify-content: center;
     align-content: center;
@@ -100,6 +146,60 @@ body {
     /* after the front-face is rotated the back-face too to show instead od the card */
 }
 
-.memory-card.flip.delete {          /* Adding visibility hidden to new className added to cards on deleteCards()*/
+.memory-card.flip.delete {
+    /* Adding visibility hidden to new className added to cards on deleteCards()*/
     visibility: hidden;
+}
+
+/* players */
+#players {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vh;
+    height: auto;
+    width: 10rem;
+    /* border: 2px solid black; */
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.play {
+    padding: 1vh;
+}
+
+#players1 {
+    color: aqua;
+}
+
+#players2 {
+    color: rgb(255, 0, 0);
+}
+
+#players3 {
+    color: rgb(255, 0, 221);
+}
+
+#players4 {
+    color: rgb(187, 255, 0);
+}
+
+#players5 {
+    color: rgb(187, 93, 93);
+}
+
+#players6 {
+    color: rgb(241, 233, 113);
+}
+
+#players7 {
+    color: rgb(0, 255, 55);
+}
+
+#players8 {
+    color: rgb(95, 13, 38);
+}
+
+[data-back='back'] {
+    /* background-color: rgb(228, 255, 129); */
+    border: 2px solid black;
 }
