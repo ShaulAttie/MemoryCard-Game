@@ -4,6 +4,7 @@ const players = document.getElementById("players")          // <div id="players"
 const ranValueOut = document.getElementById('ranValueOut')  //<output name="x" id="ranValueOut">10</output> pairs
 const ran = document.getElementById('ran')                  // <input type="range" id="ran" name="ran" min="3" max="25" value="10">
 const startGame = document.getElementById('startGame')      // <button type="submit" id="startGame">
+
 let numPairs;
 let numPlayers;
 let cards = ['0'];
@@ -229,7 +230,7 @@ function resetBoard() {
 //for Each card on cards00 we add a Click Event that will activate the function flipCard
 cards00.forEach(card => card.addEventListener('click', flipCard));
 
-//Crianting Divs for players Board on HTML
+//Creating Divs for players Board on HTML
 function createPlayers(numPlayers) {
     for (i = 1; i <= numPlayers; i++) {
         let elemDiv = document.createElement('div')       // create a div element
