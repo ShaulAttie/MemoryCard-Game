@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="Style MemoryCard.css">
+
+
+    
+</head>
+
+<body>
+    <h1 class="header">Memory Game</h1>
+
+
+    <!-- <form action="/action_page.php" target="_blank"> -->
+    <!-- 
+    Eu quero entrar aqui um tipo de formulario onde vai abrir uma nova pagina com o jogo.
+    O formulario vai perguntar ao usuario, nome, idade, e-mail, dificuldade de jogo, num de jogadores 1 ou 2?
+    tem a possibilidade de fazer com 2 jogadores??? 
+    Nome - informacao formal pra enviar o resultado por e-mail.
+    Idade - statistica de jogo
+    Dificuldade - numero que cartas a serem apresentadas ao jogador 
+            facil - 10 cartas
+            medio - 20 cartas
+            dificil - 40 cartas 
+    Jogadores - 1 - pilha de cartas encontardas do lado direito - contagem de pontuacao
+                2 - pilha de cartas de ambos os lados - contagem de pontuacao
+    -->
+
+    <!-- <form action="" id="frm1"> -->
+
+    <!-- </form> -->
+
+
+
+    <div id="game-table" class="game-table">
+        <h1 id="wellcome">Wellcome...</h1>
+    </div>
+
+
+    <div id="section2" class="section2">
+        <div class="range">
+            <label for="">How many pairs of cards do you want to play?</label> <br><br>
+
+            3 <input type="range" id="ran" name="ran" min="3" max="25" value="10"><span> 25 = </span>
+            <output name="x" id="ranValueOut">10</output> pairs
+            <br><br>
+
+            <input type="number" name="players" id="numPlayers" placeholder="1-8" min="1" max="8" step="1">
+            <button type="submit" id="startGame">Start Game</button>
+        </div>
+
+        <div class="players">
+            <h2>Players:</h2>
+            <div id="players"></div>
+        </div>
+
+        <h2 class="count">You tried <span id="count">0</span> times.</h2>
+
+    </div>
+
+    <script src="001 MemoryCard.js"></script>
+</body>
+
+</html>
