@@ -1,6 +1,6 @@
 /* Reseting Styles */
 * {
-    /* padding: 0; */
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
     /* border and padding will be inside the box limits. margin is not apply */
@@ -16,85 +16,126 @@ body {
     height: 100vh;
     width: 100vw;
     background: green;
-    display: grid;
-    grid-template-areas:
+    display: flex;
+    flex-direction: column;
+    /* grid-template-areas:
         'header header header header'
         'game-table game-table game-table range'
         'game-table game-table game-table players'
-        'game-table game-table game-table count'
+        'game-table game-table game-table count' */
 }
 
 .header {
-    grid-area: header;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 10vh;
-    /* vh = 1% Viewport Height vw = 1% Viewport Width */
+    font-size: 7vh;
     margin-top: 1vh;
-    margin-bottom: 3vh;
+    margin-bottom: 1vh;
     align-content: center;
 }
 
-.game-table {
-    grid-area: game-table;
-    margin: 3vh;
-
-}
-
-.range {
-    grid-area: range;
-    border: 0.3vh solid greenyellow;
-    margin-top: 3vh;
-    margin-right: 3vw;
-    text-align: center;
-    padding: 2vh;
-}
-
-input[type='text'] {
-    width: 5vw;
-}
-
-.players {
+.section1 {
     display: flex;
     flex-wrap: nowrap;
-    grid-area: players;
-    border: 0.3vh solid greenyellow;
-    height: 42vh;
-    margin-top: 5vh;
-    margin-right: 3vw;
-    align-content: center;
-}
-
-.count {
-    grid-area: count;
-    /* border: 2px solid black; */
-    margin-top: 3.5vh;
-    margin-right: 3vw;
-    text-align-last: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
 }
 
 .game-table {
     display: flex;
     flex-wrap: wrap;
-    /* width: 80%; */
-    width: 70vw;
-    /* height: 100%; */
-    height: 75vh;
-    border: 0.5vh solid greenyellow;
+    width: 65%;
+    height: 100%;
+    border: 2px solid greenyellow;
     /* perspective: 1000px; */
     /* this give deph to the element */
     justify-content: center;
     align-content: center;
 }
 
+.pre_section2 {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section2 {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 2px solid greenyellow;
+    text-align: center;
+    padding: 2vh;
+    height: 35%;
+}
+
+.range1 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.range2 {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-self: center;
+    text-align-last: center;
+}
+
+input[type='range'] {
+    width: 50%;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid greenyellow;
+    min-height: 60%;
+    width: 100%;
+    align-items: center;
+    /* padding: 5%; */
+    justify-content: flex-start;
+}
+
+.players h2 {
+    margin: 1rem;
+}
+
+.count {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    text-align-last: center;
+}
+
+
+
 .memory-card {
     position: relative;
     flex: 0 0 7%;
-    width: 7vw;
-    /* width: 9%; */
+    /* width: 7vw; */
+    width: 9%;
     /* width: 110px; */
-    height: 17vh;
-    /* height: 18%; */
+    /* height: 17vh; */
+    height: 18%;
     /* height: 220px; */
     margin: 0.4vh;
     transform-style: preserve-3d;
@@ -138,10 +179,11 @@ input[type='text'] {
 }
 
 .back-face {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: aqua;
-    font-size: 10vh;
-    text-align: center;
+    font-size: 65px;
     transform: rotateY(180deg);
     /* after the front-face is rotated the back-face too to show instead od the card */
 }
@@ -154,17 +196,18 @@ input[type='text'] {
 /* players */
 #players {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: 4vh;
+    flex-direction: column;
     height: auto;
-    width: 10rem;
-    /* border: 2px solid black; */
+    width: 100%;
     justify-content: center;
-    align-content: flex-start;
+    align-items: center;
 }
 
 .play {
     padding: 1vh;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 #players1 {
@@ -203,3 +246,102 @@ input[type='text'] {
     /* background-color: rgb(228, 255, 129); */
     border: 2px solid black;
 }
+
+@media screen and (max-height: 414px) and (orientation:landscape){
+    .count h2{
+        font-size: medium;
+    }
+    .range{
+        height: 40%;
+        font-size:small;
+    }
+    .players{
+        height: 75%;
+    }
+    .players h2{
+        font-size: large;
+        margin: 0.5rem;
+    }
+    .play{
+        font-size: small;
+    }
+    .pre_section2{
+        height: 104%;
+    } 
+    .section2{
+        height: 90%;
+    }
+    .range2{
+        justify-content: center;
+        width: 100%;
+        flex-direction: row;
+        height: 1rem;
+        
+    }
+    .range2 button{
+        width: 50%;
+    }
+}
+
+@media(max-width: 414px) {
+    .range2 {
+        width: 80%;
+    }
+
+    .range1 {
+        font-size: small;
+    }
+}
+
+@media(max-width: 768px) {
+    .body {
+        width: 95%;
+        min-height: 100%;
+    }
+
+    .section1 {
+        height: 250%;
+    }
+
+    .header {
+        font-size: 5vh;
+    }
+
+    .section1 {
+        flex-direction: column;
+    }
+
+    .game-table {
+        width: 95%;
+        height: 200%;
+        align-self: center;
+    }
+
+    .pre_section2 {
+        /* margin-top: 1rem; */
+        width: 95%;
+        align-self: center;
+    }
+
+    .section2 {
+        margin-top: 2rem;
+        flex-direction: row;
+        width: 95%;
+        align-self: center;
+    }
+
+    .range {
+        width: 48%;
+        height: 100%;
+    }
+
+    .players {
+        width: 48%;
+        height: 110%;
+    }
+
+    .count {
+        margin-top: 2rem;
+    }
+}
+
