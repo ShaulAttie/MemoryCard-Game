@@ -371,7 +371,7 @@ input[type='range'] {
     }
 }
 
-@media(max-width: 375px)  and (orientation:portrait){
+@media(max-width: 370px)  and (orientation:portrait){
     .header {
         font-size: 2.5rem;
     }
