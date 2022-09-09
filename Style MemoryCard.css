@@ -481,9 +481,11 @@ input[type='range'] {
         font-size: 2rem;
         /* min-height: 10%; */
     }
-
+.section1{
+    height: 85%;
+}
     .pre_section2 {
-        min-height: 45%;
+        min-height: 25%;
     }
 
     .section2 {
