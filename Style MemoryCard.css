@@ -389,4 +389,7 @@ input[type='range'] {
     .back-face {
         font-size: 2rem;
     }
+    .count {
+        padding: 2rem 1rem;
+    }
 }
