@@ -429,7 +429,7 @@ input[type='range'] {
     }
 }
 
-@media(max-width: 414px) and (orientation:portrait) {
+/* @media(max-width: 414px) and (orientation:portrait) {
     .range2 {
         width: 100%;
         flex-direction: column;
@@ -447,7 +447,7 @@ input[type='range'] {
     .back-face {
         font-size: 2rem;
     }
-}
+} */
 
 @media(max-width: 375px) and (orientation:portrait) {
     .header {
@@ -476,7 +476,7 @@ input[type='range'] {
     }
 }
 
-@media(max-width: 350px) and (orientation:portrait) {
+@media(max-width: 414px) and (orientation:portrait) {
     .header {
         font-size: 2rem;
         /* min-height: 10%; */
