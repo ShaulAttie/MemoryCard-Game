@@ -233,18 +233,7 @@ input[type='range'] {
 }
 
 
-@media(max-width: 1200px) {
-    .range2 {
-        flex-wrap: wrap;
-        width: 100%;
-        gap: 1rem;
-    }
 
-    .range2 input {
-        width: 35%;
-    }
-
-}
 
 @media screen and (max-height: 414px) and (orientation:landscape) {
     .header {
@@ -292,9 +281,10 @@ input[type='range'] {
         font-size: 0.75rem;
     }
 
-    .range2 label{
+    .range2 label {
         width: 70%;
     }
+
     .range2 button,
     .range2 input {
         width: 20%;
@@ -302,21 +292,17 @@ input[type='range'] {
     }
 }
 
-
-
-@media(max-width: 414px) {
+@media(max-width: 1200px) and (orientation:portrait) {
     .range2 {
+        flex-wrap: wrap;
         width: 100%;
-        flex-direction: column;
+        gap: 1rem;
     }
 
-    .range1 {
-        font-size: small;
+    .range2 input {
+        width: 35%;
     }
 
-    .back-face {
-        font-size: 2rem;
-    }
 }
 
 @media(max-width: 768px) and (orientation:portrait) {
@@ -330,7 +316,7 @@ input[type='range'] {
     }
 
     .header {
-        font-size: 3.5rem;
+        font-size: 2.5rem;
     }
 
     .section1 {
@@ -371,9 +357,24 @@ input[type='range'] {
     }
 }
 
-@media(max-width: 375px)  and (orientation:portrait){
+@media(max-width: 414px) and (orientation:portrait) {
+    .range2 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .range1 {
+        font-size: small;
+    }
+
+    .back-face {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 375px) and (orientation:portrait) {
     .header {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .range2 {
