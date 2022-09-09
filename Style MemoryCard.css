@@ -476,7 +476,7 @@ input[type='range'] {
     }
 }
 
-@media(max-width: 335px) and (orientation:portrait) {
+@media(max-width: 350px) and (orientation:portrait) {
     .header {
         font-size: 2rem;
         /* min-height: 10%; */
