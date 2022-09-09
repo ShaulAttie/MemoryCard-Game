@@ -17,6 +17,7 @@ body {
     background: green;
     display: flex;
     flex-direction: column;
+    position: fixed;
 }
 
 .header {
@@ -245,7 +246,7 @@ input[type='range'] {
 
 }
 
-@media screen and (max-height: 414px) and (orientation:landscape)and (min-aspect-ratio: 13/9) {
+@media screen and (max-height: 414px) and (orientation:landscape) {
     .header {
         font-size: 2.5rem;
     }
