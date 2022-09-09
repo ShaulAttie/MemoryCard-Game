@@ -197,7 +197,7 @@ input[type='range'] {
 }
 
 .play {
-    padding: 0.5rem;
+    padding: 0.2rem;
     display: flex;
     width: 100%;
     justify-content: center;
