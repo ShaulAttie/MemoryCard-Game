@@ -201,6 +201,7 @@ input[type='range'] {
     display: flex;
     width: 100%;
     justify-content: center;
+    font-size: 1.5rem;
 }
 
 #players1 {
@@ -296,7 +297,8 @@ input[type='range'] {
     .header {
         font-size: 2rem;
     }
-    .game-table{
+
+    .game-table {
         min-height: 100%;
     }
 
@@ -414,8 +416,12 @@ input[type='range'] {
         height: 100%;
     }
 
-    .players h2{
+    .players h2 {
         margin: 0.5rem;
+    }
+
+    .play {
+        font-size: 1rem;
     }
 
     .count {
@@ -428,7 +434,8 @@ input[type='range'] {
         width: 100%;
         flex-direction: column;
     }
-    .game-table{
+
+    .game-table {
         min-height: 50%;
 
     }
@@ -446,9 +453,11 @@ input[type='range'] {
     .header {
         font-size: 2rem;
     }
-.pre_section2{
-    height: 50%;
-}
+
+    .pre_section2 {
+        height: 50%;
+    }
+
     .range2 {
         width: 100%;
         flex-direction: column;
@@ -461,7 +470,47 @@ input[type='range'] {
     .back-face {
         font-size: 2rem;
     }
+
     .count {
         padding: 2rem 1rem;
+    }
+}
+
+@media(max-width: 335px) and (orientation:portrait) {
+    .header {
+        font-size: 2rem;
+        /* min-height: 10%; */
+    }
+
+    .pre_section2 {
+        min-height: 45%;
+    }
+
+    .section2 {
+        margin-top: 1rem;
+        min-height: 100%;
+    }
+
+    .range label {
+        font-size: 0.8rem;
+    }
+
+    input[type='range'] {
+        width: 40%;
+    }
+
+    .players {
+        min-height: 50%;
+    }
+
+    .count {
+        padding: 1rem 1rem;
+    }
+    .count h2{
+        font-size: 1rem;
+    }
+
+    .play {
+        font-size: 0.8rem;
     }
 }

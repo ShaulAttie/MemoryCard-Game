@@ -15,8 +15,8 @@
 </head>
 
 <body>
-    <h1 class="header">Memory Game</h1>
 
+    <h1 class="header">Memory Game</h1>
     <div class="section1">
         <div id="game-table" class="game-table">
             <h1 id="wellcome">Wellcome...</h1>
@@ -30,13 +30,13 @@
                         3 <input type="range" id="ran" name="ran" min="3" max="25" value="10"><span> 25 = </span>
                         <output name="x" id="ranValueOut">10</output> pairs
                     </div>
-                    
+
                     <div class="range2">
                         <label for="numPlayers">Num of Players:</label>
-                        <input type="number" name="players" id="numPlayers" placeholder="1-6" min="1" max="6" maxlength="1"
-                        onkeyup="if(this.value > this.max) this.value = 6; if(this.value < min) this.value = 1;"
-                        oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
-                        >
+                        <input type="number" name="players" id="numPlayers" placeholder="1-6" min="1" max="6"
+                            maxlength="1"
+                            onkeyup="if(this.value > this.max) this.value = 6; if(this.value < min) this.value = 1;"
+                            oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
                         <button type="submit" id="startGame">Start</button>
                     </div>
                 </div>
