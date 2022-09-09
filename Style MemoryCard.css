@@ -250,7 +250,7 @@ input[type='range'] {
     }
 
     .players {
-        height: 75%;
+        height: 50%;
     }
 
     .players h2 {
@@ -259,7 +259,7 @@ input[type='range'] {
     }
 
     .play {
-        font-size: 0.75rem;
+        font-size: 0.6rem;
     }
 
     .pre_section2 {
